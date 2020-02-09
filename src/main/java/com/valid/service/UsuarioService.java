@@ -26,7 +26,7 @@ public class UsuarioService implements IUsuarioService {
 	public Usuario updateProcesado(Usuario u){
 		// TODO Auto-generated method stub
 		
-		Usuario user = repository.getOne(u.getId());
+		Usuario user = repository.findById(u.getId()).get();
 		user.setProcesado(true);
 		
 		return repository.save(user);
@@ -48,6 +48,12 @@ public class UsuarioService implements IUsuarioService {
 		}
 		
 		return processed;
+	}
+	
+	
+	public void deleteAll()
+	{
+		repository.deleteAll();
 	}
 	
 	

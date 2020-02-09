@@ -25,6 +25,18 @@ public class Usuario {
 	@Column
 	private boolean procesado;
 	
+	public Usuario() 
+	{
+		
+	}
+	
+	public Usuario(String pNombre, String pApellido)
+	{
+		nombre=pNombre;
+		apellido = pApellido;
+		procesado = false;
+	}
+	
 
 	public int getId(){
 		return id;

@@ -18,6 +18,7 @@ public interface IUsuarioService {
 	
 	public List<Usuario> updatesAllProcesado(List<Usuario> toProcess);
 	
+	public void deleteAll();
 
 
 }
